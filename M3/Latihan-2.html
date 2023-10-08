@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan UTS Minggu-3 Latihan1</title>
+</head>
+<body>
+    <h1>Validasi Input</h1>
+    <p>Masukkan nama, password dan alamat email and:</p>
+    Nama:
+    <input type="text" id="nama"/><br>
+    Password:
+    <input type="text" id="pass"/><br>
+    E-mail:
+    <input type="text" id="email"/><br>
+    <input type="button" value="click" onclick="klik()"/>
+
+    <script>
+        function klik() {
+            var password;
+            password = document.getElementById("pass").value;
+            if(password === "sss") {
+                window.alert("Password Benar")
+            }
+            window.alert("Password Salah")
+        }
+    </script>
+
+
+</body>
+</html>

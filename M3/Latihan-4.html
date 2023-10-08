@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan UTS Minggu-3 Latihan1</title>
+</head>
+<body>
+    <h1>Menampilkan bilangan prima</h1>
+    <p>Masukkan sebuah angka</p>
+    Angka:
+    <input type="number" id="angka"/>
+    <input type="button" value="click" onclick="klik()"/>
+
+    <p id="tulis"></p>
+
+    <script>
+        function klik() {
+            var angka, hasil, prima;
+            angka = document.getElementById("angka").value;
+            hasil = document.getElementById("tulis");
+            prima= [];
+
+            for (var i = 2; i <= angka; i++) {
+                isPrima = 1;
+
+                for (var j = 2; j <= i; j++) {
+                    if (i % j === 0) {
+                        isPrima++;
+                    }
+                }
+
+                if (isPrima === 2) {
+                    document.getElementById("tulis").insertAdjacentHTML('beforeend', i + '<br>');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

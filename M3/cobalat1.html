@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan UTS Minggu-3</title>
+</head>
+<body>
+    <h2>Menangani Input</h2>
+    <p>Masukkan nama dan alamat email</p>
+    Nama:
+    <input type="text" id="nama"/><br>
+    Alamat email:
+    <input type="text" id="email"/><br>
+    Password:
+    <input type="number" id="pass"/><br>
+    <input type="button" value="click" onclick="klik()"/>
+
+    <p id="isi"></p>
+
+    <script>
+        function klik() {
+            var nama, alamat, pass;
+            nama = document.getElementById("nama").value;
+            alamat = document.getElementById("email").value;
+            pass = document.getElementById("pass").value;
+            var txt="Hello " + nama + ", alamat email anda adalah " + alamat + ", dan password anda adalah " + pass;
+            document.getElementById("isi").innerHTML=txt;
+        }
+    </script>
+    
+</body>
+</html>

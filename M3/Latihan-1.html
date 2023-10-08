@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan UTS Minggu-3 Latihan1</title>
+</head>
+<body>
+    <h1>Hitung faktorial dari input</h1>
+    <h2>Masukkan sembarang angka</h2>
+    <input type="number" id="angka"/>
+    <input type="button" value="click" onclick="klik()"/>
+
+    <p id="tulis"></p>
+    <p id="baca"></p>
+
+    <script>
+        function faktorial(n) {
+            if (n===0) {
+                return 1;
+            }
+            return n*faktorial(n-1);
+            document.getElementById("baca").innerHTML=faktorial(angka);
+        }
+
+        function klik () {
+            var angka, tulis;
+            angka = document.getElementById("angka").value;
+            baca = document.getElementById("baca").value= faktorial(angka)
+            var txt = "angka faktorial dari " + angka + "adalah " + baca;
+            document.getElementById("tulis").innerHTML=txt;
+        }
+    </script>
+</body>
+</html>
