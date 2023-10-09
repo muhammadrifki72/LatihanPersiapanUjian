@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan 3 Minggu-3</title>
+</head>
+<body>
+    <h1>Validasi Masukkan Pengguna</h1>
+    <p>Masukkan nama dan umur</p>
+    Nama:
+    <input type="text" id="nama"/><br>
+    Umur:
+    <input type="number" id="umur"/><br>
+    <input type="button" value="click" onclick="klik()"/>
+
+    <p id="tulis"></p>
+
+    <script>
+        function klik() {
+            var peringatan;
+            peringatan= document.getElementById("nama").value;
+            if (peringatan === "") {
+                window.alert("Isikan nama")
+            }
+            
+            var umur;
+            umur = document.getElementById("umur").value;
+            hasil=document.getElementById("tulis");
+            if (umur > 1 && umur <=5) {
+                return hasil.innerHTML="Anda masih bayi";
+            }
+
+            if (umur > 5 && umur <=15) {
+                return hasil.innerHTML="Anda masih anak-anak";
+            }
+
+            if (umur > 15 && umur <=30) {
+                return hasil.innerHTML="Anda masih remaja";
+            }
+
+            if (umur > 30 && umur <=60) {
+                return hasil.innerHTML="Anda sudah dewasa";
+            }
+
+            if (umur > 60) {
+                return hasil.innerHTML="Anda sudah dewasa";
+            }
+
+            if (umur < 1) {
+                return hasil.innerHTML="Anda Game Over";
+            }
+
+
+        }
+    </script>
+</body>
+</html>
